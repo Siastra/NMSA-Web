@@ -8,9 +8,13 @@
       router-link(to="dashboard" active-class="active")
         icon(name="th")
         span Dashboard
-      router-link(to="404" active-class="active")
+      router-link(to="heatmap" active-class="active")
         icon(name="calendar")
         span Heatmap
+      .divider
+      router-link(to="log" active-class="active")
+        icon(name="book")
+        span Log
     router-view
       p test
 </template>
@@ -60,6 +64,12 @@
       svg {
         margin-right: 8px;
       }
+    }
+
+    .divider {
+      background-color: #e1e1e1;
+      height: 1px;
+      width: 100%;
     }
   }
 

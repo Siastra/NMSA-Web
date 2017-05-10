@@ -5,7 +5,7 @@
 
 <script>
   export default {
-    name: 'card'
+    name: 'card2'
   }
 </script>
 
@@ -25,15 +25,15 @@
     }
 
     @media only screen and (min-width: 900px) {
-      width: calc(50% - 8px);
+      width: calc(100% - 8px);
     }
 
     @media only screen and (min-width: 1200px) {
-      width: calc(33% - 8px);
+      width: calc(100% - 8px);
     }
 
     @media only screen and (min-width: 1600px) {
-      width: calc(20% - 8px);
+      width: calc(70% - 8px);
     }
   }
 </style>

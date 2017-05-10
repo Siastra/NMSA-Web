@@ -9,6 +9,13 @@ const Dashboard = resolve => {
   })
 }
 
+const Log = resolve => {
+  // require.ensure is Webpack's special syntax for a code-split point.
+  require.ensure(['../components/Log.vue'], () => {
+    resolve(require('../components/Log.vue'))
+  })
+}
+
 const NotFound = resolve => {
   // require.ensure is Webpack's special syntax for a code-split point.
   require.ensure(['../components/NotFound.vue'], () => {
@@ -24,6 +31,11 @@ const router = new Router({
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard
+    },
+    {
+      path: '/log',
+      name: 'Log',
+      component: Log
     },
     {
       path: '/404',
