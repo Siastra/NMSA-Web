@@ -10,8 +10,6 @@
 </script>
 
 <style scoped lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Roboto');
-
   .card {
     background-color: #fafafa;
     border-radius: 2px;

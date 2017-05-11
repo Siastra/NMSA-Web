@@ -10,10 +10,9 @@
 <script>
   import GenericTemplate from './GenericTemplate'
   import Vuetable from 'vuetable-2/src/components/Vuetable'
-  import Card2 from './Card2'
 
   export default {
-    components: { GenericTemplate, Card2, Vuetable },
+    components: { GenericTemplate, Vuetable },
     name: 'log'
   }
 </script>

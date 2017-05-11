@@ -5,7 +5,6 @@
 
 <script>
   export default {
-    components: { },
     name: 'banner'
   }
 </script>
