@@ -23,6 +23,7 @@
     "vue-awesome": "^2.3.1",
     "vue-chartjs": "^2.6.2",
     "vue-router": "^2.3.1",
+    "vue2-dropzone": "^2.2.7",
     "vuetable-2": "^1.6.0"
   },
   "devDependencies": {
