@@ -8,9 +8,9 @@
       router-link(to="dashboard" active-class="active")
         icon(name="th")
         span Dashboard
-      router-link(to="heatmap" active-class="active")
+      router-link(to="explorer" active-class="active")
         icon(name="calendar")
-        span Heatmap
+        span Explorer
       .divider
       router-link(to="log" active-class="active")
         icon(name="book")

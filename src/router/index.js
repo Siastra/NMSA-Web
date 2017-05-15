@@ -23,10 +23,10 @@ const NotFound = resolve => {
   })
 }
 
-const Heatmap = resolve => {
+const Explorer = resolve => {
   // require.ensure is Webpack's special syntax for a code-split point.
-  require.ensure(['../components/Heatmap.vue'], () => {
-    resolve(require('../components/Heatmap.vue'))
+  require.ensure(['../components/Explorer.vue'], () => {
+    resolve(require('../components/Explorer.vue'))
   })
 }
 
@@ -40,9 +40,9 @@ const router = new Router({
       component: Dashboard
     },
     {
-      path: '/heatmap',
-      name: 'Heatmap',
-      component: Heatmap
+      path: '/explorer',
+      name: 'Explorer',
+      component: Explorer
     },
     {
       path: '/log',
