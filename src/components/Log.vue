@@ -4,7 +4,7 @@
     .ui.container
       vuetable(ref="vuetable"
         api-url="http://vuetable.ratiw.net/api/users"
-        :fields="['timestamp', 'caller', 'msg', 'level']")
+        :fields="['name', 'email', 'birthdate']")
 </template>
 
 <script>
