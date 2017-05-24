@@ -13,7 +13,7 @@
     name: 'heatmap',
     mounted: () => {
       var xmlHttp = new XMLHttpRequest()
-      xmlHttp.open('GET', 'http://127.0.0.1/api/absences', false) // false for synchronous request
+      xmlHttp.open('GET', 'http://localhost/api/absences', false) // false for synchronous request
       xmlHttp.send(null)
       var exampleData = JSON.parse(xmlHttp.responseText)
 

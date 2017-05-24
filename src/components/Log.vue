@@ -3,7 +3,7 @@
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css" media="screen" title="no title" charset="utf-8")
     .ui.container
       vuetable(ref="vuetable"
-        api-url="http://127.0.0.1/api/log"
+        api-url="http://localhost/api/log"
         :fields="['timestamp', 'caller', 'message', 'level']")
 </template>
 

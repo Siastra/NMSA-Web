@@ -2,12 +2,10 @@
   generic-template(header="Dashboard")
     card3
       h2.head Timetable
-      dropzone(id="hourTableDropzone" url="https://httpbin.org/post" v-on:vdropzone-success="showSuccess")
-        input(type="hidden" name="token" value="xxx")
+      dropzone(id="hourTableDropzone" url="http://localhost/api/upload/timetable" paramName="uploaded_file" v-on:vdropzone-success="showSuccess")
     card3
       h2.head Absences
-      dropzone(id="missings" url="https://httpbin.org/post" v-on:vdropzone-success="showSuccess")
-        input(type="hidden" name="token" value="xxx")
+      dropzone(id="missings" url="http://localhost/api/upload/absences" paramName="uploaded_file" v-on:vdropzone-success="showSuccess")
 </template>
 
 <script>
