@@ -1,6 +1,5 @@
 <template lang="pug">
   #app
-    //- audio(src="./static/win2000.ogg" autoplay style="display: hidden")
     #header
       span#title NmSA
       span#seperator
