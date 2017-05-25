@@ -12,10 +12,10 @@
   import Card3 from './Card3'
   import Dropzone from 'vue2-dropzone'
   import GenericTemplate from './GenericTemplate'
-  import Testchart from './Testchart'
+  import TestChart from './TestChart'
 
   export default {
-    components: { GenericTemplate, Card3, Testchart, Dropzone },
+    components: { GenericTemplate, Card3, TestChart, Dropzone },
     name: 'dashboard',
     methods: {
       'showSuccess': function (file) {

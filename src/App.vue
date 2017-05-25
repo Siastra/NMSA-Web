@@ -5,12 +5,15 @@
       span#seperator
       span#subtitle Never miss School Again!
     #navbar
-      router-link(to="dashboard" active-class="active")
+      router-link(to="/dashboard" active-class="active")
         icon(name="th")
         span Dashboard
-      router-link(to="explorer" active-class="active")
+      router-link(to="/explorer" active-class="active")
         icon(name="calendar")
         span Explorer
+      router-link(to="/ranking" active-class="active")
+        icon(name="list-alt")
+        span Ranking
       .divider
       router-link(to="log" active-class="active")
         icon(name="book")

@@ -8,6 +8,7 @@ import 'vue-awesome/icons/th'
 import 'vue-awesome/icons/calendar'
 import 'vue-awesome/icons/info'
 import 'vue-awesome/icons/book'
+import 'vue-awesome/icons/list-alt'
 
 Vue.config.productionTip = false
 import Icon from 'vue-awesome/components/Icon'
