@@ -2,7 +2,8 @@
   generic-template(:header="$route.params.name")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css" media="screen" title="no title" charset="utf-8")
     card3
-      user-allocation
+      h2.head Absence per Day
+      user-allocation(:name="$route.params.name")
 </template>
 
 <script>
@@ -17,7 +18,8 @@
 </script>
 
 <style scoped lang="scss">
-  .ui.container {
-    margin: 0!important
+  .head {
+    text-align: left;
+    margin-top: 0;
   }
 </style>
