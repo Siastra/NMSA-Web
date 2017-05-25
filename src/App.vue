@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    audio(src="./static/win2000.ogg" autoplay style="display: hidden")
+    //- audio(src="./static/win2000.ogg" autoplay style="display: hidden")
     #header
       span#title NmSA
       span#seperator
@@ -19,13 +19,22 @@
       router-link(to="log" active-class="active")
         icon(name="book")
         span Log
+      .right
+        .icon
+          icon(name="question-circle")
+        .icon(onClick="var xhr = new XMLHttpRequest(); xhr.open('GET', 'http://localhost/api/shutdown')")
+          icon(name="sign-out")
     router-view
-      p test
 </template>
 
 <script>
   export default {
     name: 'app'
+  }
+
+  /* eslint-disable no-unused-vars */
+  function shutdown () {
+    console.log('Test')
   }
 </script>
 
@@ -75,6 +84,33 @@
       height: 1px;
       width: 100%;
     }
+
+    .right {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 56px;
+        width: 56px;
+        background-color: #175582;
+        margin: 4px;
+        color: white;
+        transition: background-color 0.5s ease;
+
+        &:hover {
+          background-color: #F76C5E;
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
   }
 
   #header {
@@ -108,5 +144,4 @@
       font-weight: 100;
     }
   }
-
 </style>

@@ -9,9 +9,13 @@ import 'vue-awesome/icons/calendar'
 import 'vue-awesome/icons/info'
 import 'vue-awesome/icons/book'
 import 'vue-awesome/icons/list-alt'
+import 'vue-awesome/icons/sign-out'
+import 'vue-awesome/icons/question-circle'
 
 Vue.config.productionTip = false
+
 import Icon from 'vue-awesome/components/Icon'
+
 Vue.component('icon', Icon)
 /* eslint-disable no-new */
 new Vue({

@@ -10,7 +10,7 @@
 
 <script>
   import Card3 from './Card3'
-  import Dropzone from 'v<<ue2-dropzone'
+  import Dropzone from 'vue2-dropzone'
   import GenericTemplate from './GenericTemplate'
   import TestChart from './TestChart'
 
