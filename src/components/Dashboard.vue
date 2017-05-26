@@ -1,11 +1,11 @@
 <template lang="pug">
   generic-template(header="Dashboard")
     card3
-      h2.head Tests
-      dropzone(id="hourTableDropzone" url="http://localhost/api/upload/timetable" paramName="uploaded_file" v-on:vdropzone-success="showSuccess")
-    card3
       h2.head Absences
       dropzone(id="missings" url="http://localhost/api/upload/absences" paramName="uploaded_file" v-on:vdropzone-success="showSuccess")
+    card3
+      h2.head Tests
+      dropzone(id="hourTableDropzone" url="http://localhost/api/upload/timetable" paramName="uploaded_file" v-on:vdropzone-success="showSuccess")
 </template>
 
 <script>

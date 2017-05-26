@@ -4,7 +4,7 @@
     .ui.container
       vuetable(ref="vuetable"
         api-url="http://localhost/api/ranking"
-        :fields="[{name: 'id', title:''}, 'name', {name:'value', title:'Time in minutes'}]"
+        :fields="[{name: 'id', title:''}, 'name', {name:'value', title:'Time in hours'}]"
         @vuetable:cell-clicked="onCellClicked"
       )
 </template>
