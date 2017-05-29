@@ -8,9 +8,6 @@
       router-link(to="/dashboard" active-class="active")
         icon(name="th")
         span Dashboard
-      router-link(to="/explorer" active-class="active")
-        icon(name="calendar")
-        span Explorer
       router-link(to="/ranking" active-class="active")
         icon(name="list-alt")
         span Ranking
@@ -22,16 +19,32 @@
         icon(name="book")
         span Log
       .right
-        .icon
+        .icon(v-on:click="test()")
           icon(name="question-circle")
-        .icon(onclick="var xhr = new XMLHttpRequest(); xhr.open('GET', 'http://localhost/api/shutdown')")
+        .icon(v-on:click="shut()" onclick="req = new XMLHttpRequest(); req.open('GET', 'http://localhost/api/shutdown'); req.send( null );")
           icon(name="sign-out")
     router-view
+    sweet-modal.sw-modal(ref="modal")
+      documentation
+    sweet-modal.sw-modal(ref="modal2" hide-close-button blocking)
+      h1 You may close the window now!
 </template>
 
 <script>
+  import { SweetModal } from 'sweet-modal-vue'
+  import Documentation from './components/Documentation.vue'
+
   export default {
-    name: 'app'
+    name: 'app',
+    components: { SweetModal, Documentation },
+    methods: {
+      test () {
+        this.$refs.modal.open()
+      },
+      shut () {
+        this.$refs.modal2.open()
+      }
+    }
   }
 
   /* eslint-disable no-unused-vars */
@@ -41,6 +54,11 @@
 </script>
 
 <style lang="scss">
+  #app > div.sw-modal.sweet-modal-overlay.sweet-modal-clickable.is-visible > div {
+    max-width: 100vw!important;
+    max-height: 80vh;
+  }
+
   #app {
     background-color: #eee;
     display: flex;
@@ -82,8 +100,8 @@
     }
 
     .divider {
-      background-color: #e1e1e1;
-      height: 1px;
+      background-color: #aaa;
+      height: .5px;
       width: 100%;
     }
 
