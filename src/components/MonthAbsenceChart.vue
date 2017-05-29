@@ -1,17 +1,17 @@
 <script>
-  import { Radar } from 'vue-chartjs'
+  import { Line } from 'vue-chartjs'
 
-  export default Radar.extend({
+  export default Line.extend({
     props: ['name'],
     mounted () {
       var xmlHttp = new XMLHttpRequest()
-      xmlHttp.open('GET', 'http://localhost/api/user/allocation/' + this.name, false) // false for synchronous request
+      xmlHttp.open('GET', 'http://localhost/api/month/absence', false) // false for synchronous request
       xmlHttp.send(null)
       var exampleData = JSON.parse(xmlHttp.responseText)
 
       this.renderChart({
         name: 'userallocation',
-        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        labels: ['October', 'November', 'December', 'January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [
           {
             backgroundColor: ['#ED6A5E'],
@@ -19,13 +19,6 @@
             data: exampleData
           }
         ]
-      }, {
-        legend: {
-          display: false
-        },
-        tooltips: {
-          enabled: false
-        }
       })
     }
   })

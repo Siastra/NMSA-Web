@@ -14,6 +14,9 @@
       router-link(to="/ranking" active-class="active")
         icon(name="list-alt")
         span Ranking
+      router-link(to="/monthOverview" active-class="active")
+        icon(name="area-chart")
+        span Month Overview
       .divider
       router-link(to="log" active-class="active")
         icon(name="book")
@@ -21,7 +24,7 @@
       .right
         .icon
           icon(name="question-circle")
-        .icon(onClick="var xhr = new XMLHttpRequest(); xhr.open('GET', 'http://localhost/api/shutdown')")
+        .icon(onclick="var xhr = new XMLHttpRequest(); xhr.open('GET', 'http://localhost/api/shutdown')")
           icon(name="sign-out")
     router-view
 </template>

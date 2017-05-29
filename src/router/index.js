@@ -38,6 +38,12 @@ const User = resolve => {
   })
 }
 
+const MonthOverview = resolve => {
+  require.ensure(['../components/MonthOverview.vue'], () => {
+    resolve(require('../components/MonthOverview.vue'))
+  })
+}
+
 Vue.use(Router)
 
 const router = new Router({
@@ -71,6 +77,11 @@ const router = new Router({
       path: '/user/:name',
       name: 'User',
       component: User
+    },
+    {
+      path: '/monthOverview',
+      name: 'MonthOverview',
+      component: MonthOverview
     },
     {
       path: '/',

@@ -11,6 +11,7 @@ import 'vue-awesome/icons/book'
 import 'vue-awesome/icons/list-alt'
 import 'vue-awesome/icons/sign-out'
 import 'vue-awesome/icons/question-circle'
+import 'vue-awesome/icons/area-chart'
 
 Vue.config.productionTip = false
 
